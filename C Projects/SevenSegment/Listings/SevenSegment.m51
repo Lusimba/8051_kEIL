@@ -1,0 +1,105 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    02/08/2019  17:13:23  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE sevenSegdigits.obj TO SevenSegment PRINT (.\Listings\SevenSegment.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  sevenSegdigits.obj (SEVENSEGDIGITS)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+
+
+LINK MAP OF MODULE:  SevenSegment (SEVENSEGDIGITS)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         _DATA_GROUP_
+            IDATA   001EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00F6H     UNIT         ?C?LIB_CODE
+            CODE    08F6H     003BH     UNIT         ?PR?MAIN?SEVENSEGDIGITS
+            CODE    0931H     001DH     UNIT         ?PR?DELAY?SEVENSEGDIGITS
+            CODE    094EH     0014H     UNIT         ?CO?SEVENSEGDIGITS
+            CODE    0962H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   SevenSegment (SEVENSEGDIGITS)
+
+
+SEGMENT                            DATA_GROUP 
+  +--> CALLED SEGMENT            START    LENGTH
+------------------------------------------------
+?C_C51STARTUP                    -----    -----
+  +--> ?PR?MAIN?SEVENSEGDIGITS
+
+?PR?MAIN?SEVENSEGDIGITS          0008H    0016H
+  +--> ?CO?SEVENSEGDIGITS
+  +--> ?PR?DELAY?SEVENSEGDIGITS
+
+
+
+SYMBOL TABLE OF MODULE:  SevenSegment (SEVENSEGDIGITS)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SEVENSEGDIGITS
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  02/08/2019  17:13:23  PAGE 2
+
+
+  C:0931H         PUBLIC        delay
+  C:08F6H         PUBLIC        main
+  C:094EH         SYMBOL        _?ix1000
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        a
+  -------         DO            
+  D:001CH         SYMBOL        i
+  -------         ENDDO         
+  -------         ENDDO         
+  C:08F6H         LINE#         3
+  C:08F6H         LINE#         4
+  C:0909H         LINE#         5
+  C:0909H         LINE#         7
+  C:090EH         LINE#         8
+  C:0919H         LINE#         9
+  C:091CH         LINE#         10
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0931H         LINE#         13
+  C:0931H         LINE#         15
+  C:0934H         LINE#         16
+  C:0942H         LINE#         17
+  C:094DH         LINE#         18
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        SEVENSEGDIGITS
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 006CH BYTE ( 5%) *
+******************************************************************************
+
+Program Size: data=31.0 xdata=0 code=369
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

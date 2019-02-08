@@ -1,0 +1,89 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    02/08/2019  16:27:41  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE flashingled.obj TO FlashLed PRINT (.\Listings\FlashLed.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  flashingled.obj (FLASHINGLED)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  FlashLed (FLASHINGLED)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001DH     UNIT         ?PR?DELAY?FLASHINGLED
+            CODE    081DH     000EH     UNIT         ?PR?MAIN?FLASHINGLED
+            CODE    082BH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   FlashLed (FLASHINGLED)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?FLASHINGLED
+
+?PR?MAIN?FLASHINGLED
+  +--> ?PR?DELAY?FLASHINGLED
+
+
+
+SYMBOL TABLE OF MODULE:  FlashLed (FLASHINGLED)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FLASHINGLED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        delay
+  C:081DH         PUBLIC        main
+  -------         PROC          MAIN
+  C:081DH         LINE#         3
+  C:081DH         LINE#         4
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  02/08/2019  16:27:41  PAGE 2
+
+
+  C:081DH         LINE#         5
+  C:0820H         LINE#         6
+  C:0823H         LINE#         7
+  C:0826H         LINE#         8
+  C:0829H         LINE#         9
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         11
+  C:0800H         LINE#         13
+  C:0803H         LINE#         14
+  C:0811H         LINE#         15
+  C:081CH         LINE#         16
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        FLASHINGLED
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002BH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=58
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

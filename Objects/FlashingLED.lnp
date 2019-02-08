@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\flashingled.obj" 
+TO ".\Objects\FlashingLED" 
+PRINT(".\Listings\FlashingLED.m51") RAMSIZE(256) 

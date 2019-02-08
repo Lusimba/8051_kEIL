@@ -1,0 +1,3 @@
+"sevenSegdigits.obj" 
+TO "SevenSegment" 
+PRINT(".\Listings\SevenSegment.m51") RAMSIZE(256) 
